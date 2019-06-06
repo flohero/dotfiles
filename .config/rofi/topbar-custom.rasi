@@ -1,0 +1,122 @@
+/* copy this file to ~/.local/share/rofi/themes or /usr/share/rofi/themes */
+/* add `theme: "input-emph-topbar";` to config.rasi */
+
+/* input-emph-topbar rasi theme */
+/* Created by Richard Wong */
+configuration {
+  kb-mode-next: "Shift+Right";
+  kb-mode-previous: "Shift+Left";
+  columns: 1;
+}
+
+* {
+  fg: rgba(   255,   255,   255, 100 % );
+  bg: rgba( 55, 71, 79, 100 %);
+  below-bg: rgba( 55, 71, 79, 100 % );
+  selected-bg: rgba( 233, 30, 99, 100 % );
+  selected-fg: @fg;
+}
+
+#window {
+  background-color: rgba(0,0,0,50%);
+  fullscreen: true;
+  /*border-radius: 5px;*/
+  location: west;
+  anchor: west;
+
+  orientation: horizontal;
+}
+#mainbox {
+expand: false;
+  background-color: transparent;
+  children: [sidebar,inputbar,dummy,listview];
+  spacing: 0;
+}
+#sidebar {
+  background-color: transparent;
+  spacing: 0;
+}
+#button {
+  background-color: @fg;
+  text-color: @bg;
+  padding: 10px;
+  expand: false;
+}
+#button.selected {
+  background-color: @bg;
+  text-color: @fg;
+}
+#inputbar {
+  background-color: @bg;
+  text-color: @fg;
+  padding: 20px;
+  /*border-radius: 0 10px 10px 10px;*/
+  spacing: 10px;
+}
+#prompt {
+  background-color: @bg;
+  text-color: @fg;
+  font: "Ubuntu 20";
+}
+#case-indicator {
+  background-color: @bg;
+  text-color: @fg;
+  font: "Ubuntu 20";
+}
+#entry {
+  background-color: @bg;
+  text-color: @fg;
+  font: "Fira Code Retina 20";
+  width: 15em;
+}
+#dummy {
+  background-color: transparent;
+  expand: false;
+  padding: 0px 0px 0px 0px;
+}
+#listview {
+  background-color: @below-bg;
+  spacing: 0;
+  /*border-radius: 5px;*/
+}
+#element {
+  background-color: transparent;
+  padding: 10px;
+}
+#element.normal.normal {
+  background-color: @below-bg;
+  text-color:       @fg;
+}
+#element.normal.urgent {
+  background-color: @below-bg;
+  text-color:       @fg;
+}
+#element.normal.active {
+  background-color: @below-bg;
+  text-color:       @fg;
+}
+#element.selected.normal {
+  background-color: @selected-bg;
+  text-color:       @selected-fg;
+}
+#element.selected.urgent {
+  background-color: @selected-bg;
+  text-color:       @selected-fg;
+}
+#element.selected.active {
+  background-color: @selected-bg;
+  text-color:       @selected-fg;
+}
+#element.alternate.normal {
+  background-color: @below-bg;
+  text-color:       @fg;
+}
+#element.alternate.urgent {
+  background-color: @below-bg;
+  text-color:       @fg;
+}
+#element.alternate.active {
+  background-color: @below-bg;
+  text-color:       @fg;
+}
+
