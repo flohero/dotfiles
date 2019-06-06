@@ -5,7 +5,7 @@ local wibox         = require("wibox")
 local theme_assets  = require("beautiful.theme_assets")
 local dpi           = require('beautiful').xresources.apply_dpi
 local common        = require("awful.widget.common")
-
+local naughty       = require("naughty")
 local mat_color = require("themes.material.colors")
 
 local math, string, os = math, string, os
@@ -343,13 +343,18 @@ function theme.at_screen_connect(s)
                            awful.button({}, 5, function () awful.layout.inc(-1) end)))
     -- Create a taglist widget
     s.mytaglist = awful.widget.taglist(s, awful.widget.taglist.filter.all, awful.util.taglist_buttons)
-    
+    function list_update(w, buttons, label, data, objects)
+      -- call default widget drawing function
+      common.list_update(w, buttons, label, data, objects)
+      -- set widget size
+      w:set_max_widget_size(20)
+    end 
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist(s, 
       awful.widget.tasklist.filter.currenttags, 
       awful.util.tasklist_buttons, 
       {}, 
-      nil,  
+      list_update,  
       wibox.layout.fixed.horizontal()
     )
     
