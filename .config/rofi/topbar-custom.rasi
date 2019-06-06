@@ -1,8 +1,3 @@
-/* copy this file to ~/.local/share/rofi/themes or /usr/share/rofi/themes */
-/* add `theme: "input-emph-topbar";` to config.rasi */
-
-/* input-emph-topbar rasi theme */
-/* Created by Richard Wong */
 configuration {
   kb-mode-next: "Shift+Right";
   kb-mode-previous: "Shift+Left";
