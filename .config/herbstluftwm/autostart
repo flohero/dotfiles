@@ -131,7 +131,7 @@ hc keybind $Mod-Shift-e spawn kitty ranger ~
 
 # Rofi
 rofi_theme=~/.config/rofi/topbar-custom.rasi
-hc keybind $Mod-p spawn rofi -show drun -theme $rofi_theme -show-icons -drun-icon-theme Flat-Remix-Dark
+hc keybind $Mod-p spawn rofi -show drun -theme $rofi_theme 
 
 # theme
 
