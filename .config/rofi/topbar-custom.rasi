@@ -115,4 +115,4 @@ configuration {
   background-color: @below-bg;
   text-color:       @fg;
 }
-
+/* vim:ft=css
