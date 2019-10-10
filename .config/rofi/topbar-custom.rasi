@@ -8,15 +8,15 @@ configuration {
 }
 
 * {
-  fg:           rgba( 239, 83, 80, 100 % );
-  bg:           rgba( 0, 0, 0, 0 % );
+  bg:           rgba( 46, 52, 64, 100 % );
+  fg:           rgba( 180, 142, 173, 100 % );
   below-bg:     @bg;
   selected-bg:  @fg;
   selected-fg:  rgba( 0, 0, 0, 100 %);
 }
 
 #window {
-  background-color: rgba( 0, 0, 0, 50%);
+  background-color: @bg;
   padding: 300px 600px 300px 600px;
   location: center;
   anchor: center;
