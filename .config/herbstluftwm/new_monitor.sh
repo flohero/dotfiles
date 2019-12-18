@@ -6,8 +6,10 @@ hc() {
 
 xrandr --output HDMI-1-1 --auto --left-of eDP-1-1
 
+hc detect_monitors
+
 hc pad 1 25 0 0 0
 hc pad 0  0 0 0 0
 
 pkill polybar
-polybar hwm-hdmi &
+MONITOR=HDMI-1-1 polybar hwm &
